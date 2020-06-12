@@ -1842,7 +1842,7 @@ export var tns = function (options) {
     if (!imgSelector) { imgSelector = 'img'; }
 
     while (start <= end) {
-      if (slideItems[start].tagName.toLowerCase() === imgSelector) {
+      if (slideItems[start].matches(imgSelector)) {
         imgs.push(slideItems[start]);
       } else {
         forEach(slideItems[start].querySelectorAll(imgSelector), function (img) { imgs.push(img); });

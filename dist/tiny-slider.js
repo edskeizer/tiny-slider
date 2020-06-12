@@ -1481,6 +1481,11 @@ var tns = function (options) {
             'aria-label': navStr + (i + 1),
             'aria-controls': slideId,
           });
+          if (lazyload && item.getAttribute('data-src')) {
+            setAttrs(item, {
+              'src': item.getAttribute('data-src')
+            });
+          }
         });
 
         // generated nav
